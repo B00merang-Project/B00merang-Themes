@@ -1,0 +1,6 @@
+style "mintmenu-style"
+{
+    bg_pixmap[NORMAL] = "Panel/bc.png"
+}
+
+widget "mintmenu.*" style "mintmenu-style"
