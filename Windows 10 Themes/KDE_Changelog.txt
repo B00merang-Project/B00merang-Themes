@@ -1,0 +1,5 @@
+KDE Edition was first submitted to KDE-Look.org on September 28th, 2015
+
+v0.2 Basic theme with Transparency issues. We do not reccommend to use this version.
+
+v0.3 Fixes transparency issues. Still has some color problems.
