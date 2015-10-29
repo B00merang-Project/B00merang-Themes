@@ -65,3 +65,7 @@ v0.6.9 (all themes) : Window buttons for GNOME-SHELL now available! We also test
 v0.7 (all themes) : Final Cinnamon release, even if I may include some other tweaks in the future. Version 0.3 of KDE Plasma Window theme is included.
 
 v0.7.1 (all themes) : Bug correction in Cinnamon.css, New RGB colors for warnings and root windows in GTK 3
+
+v0.7.2 (all themes) : More correctives to Cinnamon theme, GTK 2 filemanager.rc bug corrected.
+
+v0.7.3 (all themes) : New switches for Cinnamon and GTK 3, filemanager dark_combo fix
