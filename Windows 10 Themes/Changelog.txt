@@ -68,4 +68,6 @@ v0.7.1 (all themes) : Bug correction in Cinnamon.css, New RGB colors for warning
 
 v0.7.2 (all themes) : More correctives to Cinnamon theme, GTK 2 filemanager.rc bug corrected.
 
-v0.7.3 (all themes) : New switches for Cinnamon and GTK 3, filemanager dark_combo fix
+v0.7.3 (all themes) : New switches for Cinnamon and GTK 3, filemanager dark_combo fix, Dark Metacity blue borders removed
+
+v0.7.4 (all themes) : Fixed missing asset in Default Windows 10 Cinnamon theme, Unity.css fixes, dark Unity panel is back, Fixes small bug in metacity for Dark theme, mintemnu text is now white.
