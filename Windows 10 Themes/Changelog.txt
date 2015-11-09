@@ -1,4 +1,6 @@
 Windows 10 Theme was first submitted September 9th, 2015
+Author(s) : Christian Medel (Elbullazul)
+Last update : 9/11/2015
 Original release included only Default theme.
 
 Changelog:
@@ -75,3 +77,7 @@ v0.7.4 (all themes) : Fixed missing asset in Default Windows 10 Cinnamon theme, 
 v0.7.5 (all themes) : New Black color for LXDE, MATE and Xfce panels, modified openbox theme with new minimize and maximize buttons, desktop text for Xfce is now white, dark borders for Xfwm, xfce-notify theme updated and included in dark theme as well, GNOME-SHELL button color fix, new minimize button for Xfce theme.
 
 v0.7.6 (all themes) : Fixes color issues with the MATE menu
+
+v0.7.6b (all themes) : Uses lighter text color for GTK 2 applications (dark theme), last update to filemanager.rc (Default theme)
+
+v0.7.7 (all themes) : Removes inclusion of Filemanager.rc since the theming it brought (once the bugs signaled by zerophase were fixed) didn't brought the fixes we expected. Also, final fix for known Xfce issue (see Github for details) is released, small fix for checkboxes fg color in Dark theme.
