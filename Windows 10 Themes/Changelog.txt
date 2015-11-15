@@ -81,3 +81,5 @@ v0.7.6 (all themes) : Fixes color issues with the MATE menu
 v0.7.6b (all themes) : Uses lighter text color for GTK 2 applications (dark theme), last update to filemanager.rc (Default theme)
 
 v0.7.7 (all themes) : Removes inclusion of Filemanager.rc since the theming it brought (once the bugs signaled by zerophase were fixed) didn't brought the fixes we expected. Also, final fix for known Xfce issue (see Github for details) is released, small fix for checkboxes fg color in Dark theme.
+
+v0.7.8 (all themes) : New transparency levels for Cinnamon
