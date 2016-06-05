@@ -2,7 +2,7 @@
 
 This repository has been started : October 25th 2015 by Elbullazul
 
-b00merang.weebly.com/b00merang-collection.html
+http://b00merang.weebly.com/b00merang-collection.html
 
 *Themes available for download :*
 
