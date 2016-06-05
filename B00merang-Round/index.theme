@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=B00merang Round
+Comment=A modern flat round theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=B00merang Round
+MetacityTheme=B00merang Round
+ButtonLayout=:minimize,maximize,close

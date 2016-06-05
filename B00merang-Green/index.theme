@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=B00merang-Green v1.1
+Comment=Theme by Christian Medel (Elbullazul) (00216 97 95 72 72)
+Comment=OpenBox theme by Peter Lindackers (Trekker)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=B00merang-Green v1.1
+MetacityTheme=B00merang-Green v1.1
+IconTheme=Numix-Circle-Light
+CursorTheme=Maya-Blue
+
+
