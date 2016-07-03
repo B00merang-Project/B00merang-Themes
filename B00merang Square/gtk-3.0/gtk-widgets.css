@@ -1305,15 +1305,6 @@ GtkProgressBar {
     background-color: @theme_selected_bg_color;
     background-image: linear-gradient(to bottom,
                                       @theme_selected_bg_color,
-                                      @theme_selected_bg_color
-                                      );
-}
-
-.progressbar.vertical {
-    background-color: @theme_selected_bg_color;
-    background-image: linear-gradient(to right,
-                                      @theme_selected_bg_color,
-                                      @theme_selected_bg_color
                                       );
 }
 
@@ -1325,11 +1316,6 @@ GtkProgressBar {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
-}
-
-.trough.vertical {
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
 }
