@@ -26,8 +26,8 @@
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
     -GtkRange-trough-under-steppers: 1;
-    -GtkScrollbar-has-backward-stepper: false;
-    -GtkScrollbar-has-forward-stepper: false;
+    -GtkScrollbar-has-backward-stepper: true;
+    -GtkScrollbar-has-forward-stepper: true;
     -GtkScrollbar-min-slider-length: 80;
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
@@ -1526,14 +1526,16 @@ GtkLevelBar.vertical {
     border-radius: 0;
     background-color: transparent;
     background-image: none;
-    color: shade(@theme_bg_color, 0.6);
+    color: shade(@theme_fg_color, 0.6);
 }
 
 .scrollbar.slider {
     border-width: 1px;
     border-color: mix(shade(@theme_bg_color, 0.87), @theme_fg_color, 0.21);
-    border-radius: 0;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.21);
+    border-radius: 2px;
+    background: linear-gradient(to right, #959595 15%, 
+                                          #4c4c4c 50%, 
+                                          #000000 51%);
 }
 
 .scrollbar.slider:hover,
@@ -2048,13 +2050,17 @@ GtkColorButton.button {
 /**************
  * header-bar *
  **************/
-.header-bar {
+.header-bar,
+.titlebar .header-bar {
     padding: 4px;
-    border-width: 0 0 1px 0;
+    border-width: 2px;
     border-style: solid;
-    border-color: shade(@titlebar_bg_color, 0.8);
+    border-color: /*shade(@titlebar_bg_color, 0.8);*/ transparent;
     background-color: @titlebar_bg_color;
-    background-image: none;
+    background: linear-gradient(to bottom, #4d4d4d 0%,
+                                           #3a3a3a 26%,
+                                           #181818 50%,
+                                           #000000 51%);
     color: @titlebar_fg_color;
 }
 
@@ -2080,7 +2086,7 @@ GtkColorButton.button {
 .header-bar .button {
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: shade(@titlebar_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.1));
     color: @titlebar_fg_color;
 }
 

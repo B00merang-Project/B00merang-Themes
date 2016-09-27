@@ -19,7 +19,7 @@
 		<distance name="button_height" value="23"/>
 		<distance name="title_vertical_pad" value="1"/>
 		<border name="title_border" left="1" right="1" top="1" bottom="0"/>
-		<border name="button_border" left="0" right="0" top="6" bottom="4"/>
+		<border name="button_border" left="5" right="0" top="6" bottom="4"/>
 	</frame_geometry>
 
 	<frame_geometry name="maximized" parent="normal" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false">

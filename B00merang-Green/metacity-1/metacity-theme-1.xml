@@ -16,8 +16,8 @@
   <distance name="bottom_height" value="4"/>
   <distance name="left_titlebar_edge" value="9"/>
   <distance name="right_titlebar_edge" value="9"/>
-  <distance name="button_width" value="25"/>
-  <distance name="button_height" value="25"/>
+  <distance name="button_width" value="20"/>
+  <distance name="button_height" value="20"/>
   <distance name="title_vertical_pad" value="0"/>
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
   <border name="button_border" left="3" right="0" top="0" bottom="0"/>
@@ -29,8 +29,8 @@
   <distance name="bottom_height" value="0"/>
   <distance name="left_titlebar_edge" value="9"/>
   <distance name="right_titlebar_edge" value="3"/>
-  <distance name="button_width" value="25"/>
-  <distance name="button_height" value="25"/>
+  <distance name="button_width" value="20"/>
+  <distance name="button_height" value="20"/>
   <distance name="title_vertical_pad" value="0"/>
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
   <border name="button_border" left="3" right="1" top="0" bottom="0"/>
