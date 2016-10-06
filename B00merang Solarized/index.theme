@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=B00merang Solarized Dark
+Comment=Solarized theme for GTK-compatible UIs
+Comment=Author : Christian Medel (Elbullazul)
+Version=Version ∞
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=B00merang Solarized Dark
+MetacityTheme=B00merang Solarized Dark
+ButtonLayout=:minimize,maximize,close
