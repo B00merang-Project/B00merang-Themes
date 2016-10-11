@@ -43,7 +43,7 @@
 }
 
 .dynamic-notebook .notebook tab .entry {
-    border-radius: 2px;
+    border-radius: 0px;
     padding: 4px 3px;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .dynamic-notebook .menu GtkLabel {
-    color: @menu_fg;
+    color: @menu_fg_color;
 }
 
 /****************
@@ -74,7 +74,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_base_color, 0.8);
-    border-radius: 2px;
+    border-radius: 0px;
     background-color:@theme_base_color;
     background-image: none;
     color: @theme_text_color;
@@ -101,7 +101,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_base_color, 0.8);
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: shade(@theme_base_color, 1.08);
     background-image: none;
     color: @theme_text_color;
@@ -188,7 +188,7 @@
     margin: 0 3px;
     padding: 0 6px;
     border-width: 0;
-    border-radius: 10px;
+    border-radius: 0;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
@@ -389,7 +389,7 @@ GraniteWidgetsStatusBar {
 GraniteWidgetsPopOver {
     -GraniteWidgetsPopOver-arrow-width: 21;
     -GraniteWidgetsPopOver-arrow-height: 12;
-    -GraniteWidgetsPopOver-border-radius: 2px;
+    -GraniteWidgetsPopOver-border-radius: 0px;
     -GraniteWidgetsPopOver-border-width: 1;
     -GraniteWidgetsPopOver-shadow-size: 12;
 
@@ -502,7 +502,7 @@ GraniteWidgetsPopOver *.separator {
 
 .button.app {
     border-width: 0;
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: transparent;
     background-image: none;
 }
@@ -533,7 +533,7 @@ GraniteWidgetsPopOver *.separator {
 
 .gala-workspace-selected {
     border-width: 1px;
-    border-radius: 2px;
+    border-radius: 0px;
     border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: @theme_selected_bg_color;
     background-image: none;
@@ -547,7 +547,7 @@ GraniteWidgetsPopOver *.separator {
     padding: 3px 6px;
     border-width: 1px;
     border-color: shade(@theme_base_color, 0.7);
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: @theme_base_color;
     background-image: none;
 }
@@ -620,7 +620,7 @@ BirdieWidgetsTweetList * {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_base_color, 0.7);
-    border-radius: 2px;
+    border-radius: 0px;
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
