@@ -1,16 +1,12 @@
 # The Official B00merang Repository
 
-This repository has been started : October 25th 2015
+Repository hosting all themes included in the [B00merang Theme Collection](http://b00merang.weebly.com/b00merang-collection.html)
 
 **Maintainer :** [Elbullazul](https://github.com/elbullazul)
 
 **Distributor :** [B00merang Project](https://github.com/B00merang-Project)
 
 **License :** GPL v3
-
-**More info :** http://b00merang.weebly.com/b00merang-collection.html
-
-> **Quick installation guide : http://b00merang.weebly.com/easy-installation.html**
 
 ##Themes available in this repository
 
@@ -29,3 +25,5 @@ This repository has been started : October 25th 2015
 ###Solarized
 
 ![solarized](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/14053794-1780974695511615-8843763051076651632-o-orig_1_orig.png)
+
+> **Quick installation guide : http://b00merang.weebly.com/easy-installation.html**
