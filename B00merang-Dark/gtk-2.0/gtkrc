@@ -6,7 +6,7 @@
 #       DESCRIPTION: Dark green theme designed for linux mint users.
 #       Based on : Zorin OS Dark theme, Android Cinnamon Theme, Numix-Light theme (GNOME-LOOK.org), Hackstation, Numix GTK Theme and flatunity + Alienware cinnamon theme
 
-gtk-color-scheme = "bg_color:#151516\nfg_color:#969696\nbase_color:#151516\ntext_color:#a3a3a3\nselected_bg_color:#122456\nselected_fg_color:#727272\ntooltip_bg_color:#151516\ntooltip_fg_color:#ffffff\ntitlebar_bg_color:#151516\ntitlebar_fg_color:#727272\nmenubar_bg_color:#151516\nmenubar_fg_color:#727272\ntoolbar_bg_color:#151516\ntoolbar_fg_color:#727272\nmenu_bg_color:#252525\nmenu_fg_color:#a3a3a3\npanel_bg_color:#1f44a8\npanel_fg_color:#1f44a8\nlink_color:#1f44a8"
+gtk-color-scheme = "bg_color:#151516\nfg_color:#969696\nbase_color:#151516\ntext_color:#a3a3a3\nselected_bg_color:#1a347c\nselected_fg_color:#727272\ntooltip_bg_color:#151516\ntooltip_fg_color:#ffffff\ntitlebar_bg_color:#151516\ntitlebar_fg_color:#727272\nmenubar_bg_color:#151516\nmenubar_fg_color:#727272\ntoolbar_bg_color:#151516\ntoolbar_fg_color:#727272\nmenu_bg_color:#252525\nmenu_fg_color:#a3a3a3\npanel_bg_color:#1f44a8\npanel_fg_color:#1f44a8\nlink_color:#1f44a8"
 
 # Default Style
 

@@ -197,30 +197,42 @@ GtkAssistant .sidebar {
 /**********
  * button *
  **********/
-.button {
+.button,
+.button.flat:hover {
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 0;
 
-    padding: 3px;
-    border-width: 1px;
+    padding: 3px 8px;
+    border-width: 4px;
+    border-image: url('assets/chrome1.png') 4 4 4 4 / 4px 4px 4px 4px stretch;
     border-radius: 2px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, alpha(white, 0.12), alpha(white, 0.02));
     color: @theme_fg_color;
+}
+
+.button.flat {
+    border-image: none;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
 }
 
 .button:hover {
     border-color: shade(@theme_bg_color, 0.7);
     background-color: shade(@theme_bg_color, 1.10);
-    background-image: none;
 }
 
-.button:active {
+.button:active,
+.button:checked,
+.button.flat:active,
+.button.flat:checked {
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 0.95);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(70,70,70,0.1));
 }
 
 .button:active:hover {
@@ -321,6 +333,7 @@ column-header .button,
 column-header .button:active {
     border-width: 0 1px 1px 0;
     border-radius: 0;
+    border-image: none;
 }
 
 column-header .button,
@@ -1191,7 +1204,7 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab {
-    padding: 4px;
+    padding: 4px 20px;
     border-style: none;
     background-color: shade(@theme_base_color, 0.85);
     background-image: none;
@@ -1203,7 +1216,7 @@ GtkModelButton.button:selected {
 }
 
 .notebook tab:active {
-    background-color: shade(@theme_base_color, 0.85);
+    background-color: alpha(white, 0.02);
     background-image: none;
 }
 
@@ -1427,7 +1440,7 @@ GtkLevelBar.vertical {
 
 .scale.slider {
     border-radius: 8px;
-    background-color: shade(@theme_bg_color, 1.08);
+    background-color: shade(@theme_bg_color, 1.8);
     background-image: none;
     /* we will draw the border using box shadow for now */
     box-shadow: inset 1px 0 shade(@theme_bg_color, 0.8),
@@ -1469,7 +1482,7 @@ GtkLevelBar.vertical {
     margin: 7px 0;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 2px;
-    background-color: shade(@theme_bg_color, 1.08);
+    background-color: shade(@theme_bg_color, 1.5);
     background-image: none;
 }
 
@@ -1534,6 +1547,12 @@ GtkLevelBar.vertical {
     border-color: mix(shade(@theme_bg_color, 0.87), @theme_fg_color, 0.21);
     border-radius: 2px;
     background: linear-gradient(to right, #959595 15%, 
+                                          #4c4c4c 50%, 
+                                          #000000 51%);
+}
+
+.scrollbar.slider.horizontal {
+    background: linear-gradient(to bottom, #959595 15%, 
                                           #4c4c4c 50%, 
                                           #000000 51%);
 }
@@ -1718,6 +1737,7 @@ GtkComboBox .separator {
     border-width: 0;
     border-radius: 0;
     border-style: none;
+    border-image: none;
     background-color: transparent;
     background-image: none;
     box-shadow: inset 1px 0 shade(@theme_base_color, 0.9);
@@ -1899,7 +1919,7 @@ GtkStatusbar {
 GtkSwitch {
     padding: 0;
     border-radius: 2px;
-    font: bold condensed;
+    font: condensed;
 }
 
 GtkSwitch.slider {
@@ -1907,7 +1927,7 @@ GtkSwitch.slider {
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(180,180,180,0.1),rgba(180,180,180,0.02));
 }
 
 GtkSwitch.slider:insensitive {
@@ -2052,7 +2072,7 @@ GtkColorButton.button {
  **************/
 .header-bar {
     padding: 4px;
-    border-width: 2px;
+    border-width: 0;
     border-style: solid;
     border-color: /*shade(@titlebar_bg_color, 0.8);*/ transparent;
     background-color: @titlebar_bg_color;
@@ -2087,9 +2107,11 @@ GtkColorButton.button {
 
 .header-bar GtkComboBox,
 .header-bar .button {
-    border-color: shade(@titlebar_bg_color, 0.8);
+    border-color: black;
+    border-width: 1px;
+    border-image: none;
     background-color: shade(@titlebar_bg_color, 1.08);
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+    background-image: linear-gradient(to bottom, rgba(180,180,180,0.1),rgba(180,180,180,0.02));
     color: @titlebar_fg_color;
 }
 
@@ -2099,10 +2121,11 @@ GtkColorButton.button {
     background-image: none;
 }
 
-.header-bar .button:active {
+.header-bar .button:active,
+.header-bar .button:checked {
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: shade(@titlebar_bg_color, 0.95);
-    background-image: none;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.1));
 }
 
 .header-bar .button:active:hover {
@@ -2189,7 +2212,7 @@ GtkColorButton.button {
 
 .primary-toolbar GtkComboBox,
 .primary-toolbar .button {
-    padding: 2px;
+    padding: 2px 4px;
     border-width: 1px;
     border-color: transparent;
     border-radius: 2px;
@@ -2202,9 +2225,10 @@ GtkColorButton.button {
 .primary-toolbar .raised.button,
 .toolbar GtkComboBox,
 .toolbar .button {
+    padding: 2px 4px;
     border-color: shade(@toolbar_bg_color, 0.8);
     background-color: shade(@toolbar_bg_color, 1.08);
-    background-image: none;
+    background-image: linear-gradient(to bottom, alpha(white, 0.12), alpha(white, 0.02));
     color: @toolbar_fg_color;
 }
 
@@ -3466,7 +3490,10 @@ GtkBubbleWindow .toolbar {
  *******/
 .titlebar {
     border-radius: 2px 2px 0 0;
-    background-image: none;
+    background: linear-gradient(to bottom, #4d4d4d 0%,
+                                           #3a3a3a 26%,
+                                           #181818 50%,
+                                           #000000 51%);
     background-color: @titlebar_bg_color;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
@@ -3520,22 +3547,6 @@ GtkBubbleWindow .toolbar {
     color: shade(@theme_selected_bg_color, 0.9);
     box-shadow: none;
 }
-
-/*
-.titlebar .right .titlebutton:first-child {
-    border-left: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .right .titlebutton:last-child {
-}
-
-.titlebar .left .titlebutton:last-child {
-    border-right: 1px solid shade(@titlebar_bg_color, 0.9);
-}
-
-.titlebar .left .titlebutton:first-child {
-}
-*/
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
