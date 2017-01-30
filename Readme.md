@@ -22,8 +22,4 @@ Repository hosting all themes included in the [B00merang Theme Collection](http:
 
 ![green](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/271897781.png)
 
-###Solarized
-
-![solarized](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/14053794-1780974695511615-8843763051076651632-o-orig_1_orig.png)
-
 > **Quick installation guide : http://b00merang.weebly.com/easy-installation.html**
