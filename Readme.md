@@ -22,4 +22,4 @@ Repository hosting all themes included in the [B00merang Theme Collection](http:
 
 ![green](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/271897781.png)
 
-> **Quick installation guide : http://b00merang.weebly.com/easy-installation.html**
+> **Quick installation guide : http://b00merang.weebly.com/easy-installation-guide.html**
