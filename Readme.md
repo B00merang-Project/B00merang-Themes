@@ -8,17 +8,17 @@ Repository hosting all themes included in the [B00merang Theme Collection](http:
 
 **License :** GPL v3
 
-##Themes available in this repository
+## Themes available in this repository
 
-###Dark
+### Dark
 
 ![dark](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-09-27-11-40-51.png)
 
-###Glass
+### Glass
 
 ![glass](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/140909810.png)
 
-###Green
+### Green
 
 ![green](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/271897781.png)
 
