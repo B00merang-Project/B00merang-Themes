@@ -329,7 +329,6 @@ button:link > label, button:visited > label {
     text-decoration-line: underline;
 }
 
-
 /*****************
  * column-header *
  *****************/
@@ -579,35 +578,31 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
 }
 
-statusbar frame {
-    border-width: 0;
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
 }
 
 /*******************
  * scrolled window *
  *******************/
 scrolledwindow .frame {
-    /*border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);*/
     border: none;
     border-radius: 0;
 }
 
-/* file chooser white bg color on iconview */
 .nautilus-window scrolledwindow {
     background: @theme_base_color;
 }
 
-/* avoid double borders when a viewport is
- * packed into a GtkScrolledWindow */
 scrolledwindow viewport frame {
     border-style: none;
 }
@@ -928,9 +923,6 @@ image:disabled {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1019,6 +1011,20 @@ menu button {
     background-image: none;
 }
 
+menuitem.button.flat check:last-child,
+menuitem.button.flat radio:last-child,
+modelbutton.flat check:last-child,
+modelbutton.flat radio:last-child {
+    margin-left: 11px;
+}
+    
+menuitem.button.flat check:first-child,
+menuitem.button.flat radio:first-child,
+modelbutton.flat check:first-child,
+modelbutton.flat radio:first-child {
+    margin-right: 11px;
+}
+
 .context-menu {
     font: initial;
 }
@@ -1078,7 +1084,6 @@ treemenu menuitem {
 
 menu menuitem,
 menu > menuitem {
-    -GtkMenuItem-arrow-scaling: 0.5;
     padding: 3px 3px;
     border-width: 0;
     border-style: solid;
@@ -1134,6 +1139,8 @@ menuitem radio,
 menuitem radio:hover,
 menuitem radio:disabled {
     border-style: none;
+    min-height: 16px;
+    min-width: 16px;
     background-color: transparent;
     background-image: none;
 }
@@ -1142,6 +1149,17 @@ menuitem check:checked,
 menuitem radio:checked {
     border-style: none;
     background-color: transparent;
+}
+
+menuitem check:dir(ltr),
+menuitem radio:dir(ltr) {
+    margin-right: 9px;
+    margin-left: 2px;
+}
+menuitem check:dir(rtl),
+menuitem radio:dir(rtl) {
+    margin-left: 9px;
+    margin-right: 2px;
 }
 
 menuitem calendar:indeterminate {
@@ -1264,6 +1282,14 @@ popover.background checkbutton:selected,
 popover.background radiobutton:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
+}
+
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
 /************
@@ -1575,7 +1601,7 @@ scale {
 scale slider {
     min-height: 16px;
     min-width: 16px;
-    margin: -8px;
+    margin: -7px;
     border-radius: 8px;
     background-color: shade(@theme_bg_color, 1.08);
     background-image: none;
@@ -1602,13 +1628,13 @@ scale slider:disabled {
                 inset 0 -1px shade(@theme_bg_color, 0.85);
 }
 
+scale slider.fine-tune,
+scale slider.fine-tune:hover,
 scale slider.fine-tune:active,
 scale slider.fine-tune:active:hover,
 scale slider.fine-tune.horizontal:active,
 scale slider.fine-tune.horizontal:active:hover {
-      background-size: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
+      margin: -7px;
 }
 
 scale marks {
@@ -1794,8 +1820,8 @@ headerbar.titlebar button.separator:disabled {
     background-image: image(shade(@titlebar_bg_color, 0.85));
 }
 
-menuitem separator,
-menuitem.separator {
+menu separator,
+menu.separator {
     background-image: image(shade(@menu_bg_color, 0.9));
 }
 
@@ -1806,54 +1832,65 @@ combobox.separator {
 }
 
 /***********
- * sidebar *
+ * Sidebar *
  ***********/
-.sidebar,
-.sidebar.view,
-.sidebar .view,
-placessidebar .view,
-.sidebar scrolledwindow {
+.sidebar {
+    border-style: none;
     background-color: @sidebar_bg_color;
-    color: @sidebar_fg_color;
 }
 
-.sidebar row:selected,
-.sidebar row:selected:hover,
-.sidebar row:selected:focus,
-.sidebar .view,
-.sidebar .view:selected,
-.sidebar .view:selected:hover,
-placessidebar .view row:selected,
-placessidebar .view row:selected:hover,
-placessidebar .view row:selected:focus {
-    border-color: shade(@theme_selected_bg_color, 0.9);
-    background-color: @theme_selected_bg_color;
-    background-image: none;
-    color: @sidebar_fg_color;
+.sidebar.left,
+.sidebar:dir(ltr),
+.sidebar.left:dir(rtl),
+stacksidebar.sidebar.left list,
+stacksidebar.sidebar:dir(ltr) list,
+stacksidebar.sidebar.left:dir(rtl) list {
+    border-right: none;
+    border-left-style: none;
 }
 
-.sidebar row:hover,
-.sidebar .view:hover,
-placessidebar .view row:hover {
-    border-color: shade(@theme_selected_bg_color, 1.05);
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    background-image: none;
-    color: @sidebar_fg_color;
+.sidebar.right,
+stacksidebar.sidebar.right list .sidebar:dir(rtl),
+stacksidebar.sidebar:dir(rtl) list.sidebar:dir(rtl) {
+    border-left: 1px solid shade(@theme_bg_color, 0.8);
+    border-right-style: none;
 }
 
-.sidebar row:selected:hover,
-.sidebar .view:selected:hover,
-placessidebar .view row:selected:hover {
-    border-color: shade(@theme_selected_bg_color, 1.05);
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    background-image: none;
-    color: @theme_selected_fg_color;
+.sidebar:backdrop {
+    background-color: @sidebar_bg_color;
+    border-color: shade(shade(@sidebar_bg_color, 0.8), 0.95);
+    transition: 200ms ease-out;
 }
 
-.sidebar frame {
-    border-width: 0;
+.sidebar list {
+    background-color: transparent;
 }
 
+paned .sidebar,
+paned .sidebar.left,
+paned .sidebar.right,
+paned .sidebar:dir(rtl),
+paned .sidebar:dir(ltr),
+paned .sidebar.left:dir(rtl) {
+    border-style: none;
+}
+
+stacksidebar row {
+    padding: 10px 4px;
+}
+
+stacksidebar row > label {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+stacksidebar row.needs-attention > label {
+    background-size: 6px 6px, 0 0;
+}
+
+/****************
+ * File chooser *
+ ****************/
 placessidebar > viewport.frame {
     border-style: none;
 }
@@ -1865,6 +1902,26 @@ placessidebar row {
 
 placessidebar row > revealer {
     padding: 0 14px;
+}
+
+placessidebar row:selected {
+    color: @theme_selected_fg_color;
+}
+
+placessidebar row:disabled {
+    color: alpha(@theme_fg_color, 0.7);
+}
+
+placessidebar row:backdrop {
+    color: alpha(@theme_fg_color, 0.7);
+}
+
+placessidebar row:backdrop:selected {
+    color: shade(@theme_bg_color, 0.7);
+}
+
+placessidebar row:backdrop:disabled {
+    color: alpha(@theme_fg_color, 0.7);
 }
 
 placessidebar row image.sidebar-icon {
@@ -1897,12 +1954,60 @@ button.sidebar-button {
     -gtk-outline-radius: 100%;
 }
 
+button.sidebar-button:backdrop > image,
+button.sidebar-button:not(:hover):not(:active) > image {
+    opacity: 0.7;
+}
+
+placessidebar row:selected:active {
+    box-shadow: none;
+}
+
+placessidebar row.sidebar-placeholder-row {
+    padding: 0 8px;
+    min-height: 2px;
+    background-image: image(@success_color);
+    background-clip: content-box;
+}
+
+placessidebar row.sidebar-new-bookmark-row {
+    color: @theme_selected_bg_color;
+}
+
+placessidebar row:drop(active):not(:disabled) {
+    color: @success_color;
+    box-shadow: inset 0 1px @success_color, inset 0 -1px @success_color;
+}
+
+placessidebar row:drop(active):not(:disabled):selected {
+    color: @theme_selected_fg_color;
+    background-color: @success_color;
+}
+
+placesview .server-list-button > image {
+    transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -gtk-icon-transform: rotate(0turn);
+}
+
+placesview .server-list-button:checked > image {
+    transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -gtk-icon-transform: rotate(-0.5turn);
+}
+
+placesview row.activatable:hover {
+    background-color: transparent;
+}
+
+placesview > actionbar > revealer > box > label {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 /**************
  * spinbutton *
  **************/
 spinbutton {
-    color: mix(@theme_text_color, @theme_base_color, 0.4);
+    color: @theme_text_color;
     padding: 2px 4px;
     border-width: 0;
     border-radius: 0;
@@ -1965,10 +2070,10 @@ spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection {
  * spinner *
  ***********/
 @keyframes spin {
-  to {
-    -gtk-icon-transform: rotate(1turn);
-}
-
+    to
+    {
+        -gtk-icon-transform: rotate(1turn);
+    }
 }
 
 spinner {
@@ -2045,11 +2150,17 @@ textview {
     color: @theme_text_color;
 }
 
-.view:selected:focus, iconview:selected:focus, .view:selected, 
-.view text:selected:focus, textview text:selected:focus,
-.view text:selected, textview text:selected, .view text selection:focus, .view text selection, 
-textview text selection:focus,
-textview text selection {
+.view:selected, 
+.view text:selected,
+.view text selection, 
+textview text:selected,
+textview text selection,
+.view:selected:focus,
+iconview:selected:focus,
+.view text:selected:focus,
+.view text selection:focus,
+textview text:selected:focus,
+textview text selection:focus {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
@@ -2985,8 +3096,6 @@ tooltip * {
  * treeview *
  ************/
 treeview {
-    -treeview-vertical-separator: 0;
-    -GtkWidget-focus-line-width: 1;
 }
 
 treeview.dnd {
@@ -3002,8 +3111,8 @@ treeview entry {
     background-image: none;
 }
 
-/* treeview */
-treeview.view:selected:focus, treeview.view:selected, row:selected {
+treeview.view:selected:focus,
+treeview.view:selected, row:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
@@ -3124,6 +3233,10 @@ overlay.osd {
 .osd frame {
     background-clip: border-box;
     background-origin: border-box;
+}
+
+.app-notification border {
+    border: none;
 }
 
 .osd button {

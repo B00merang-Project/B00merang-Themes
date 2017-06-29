@@ -467,7 +467,6 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-top-left-radius: 0;
 }
 
-
 /*********
  * entry *
  *********/
@@ -1680,77 +1679,70 @@ GtkComboBox .separator {
     color: @sidebar_fg_color;
 }
 
-/* remove prelight from sidebar (nonexistent in xp)
-
-.sidebar row:prelight,
-.sidebar .view row:prelight {
-    border-color: shade(@theme_selected_bg_color, 1.05);
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    background-image: none;
-    color: @sidebar_fg_color;
-}
-
-.sidebar row:selected:prelight,
-.sidebar .view row:selected:prelight {
-    border-color: shade(@theme_selected_bg_color, 1.05);
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    background-image: none;
-    color: @theme_selected_fg_color;
-} */
-
 .sidebar .frame {
     border-width: 0;
 }
 
 /* remove nautilus sidebar hover */
 NautilusWindow .list-row:hover {
-  background-color: @sidebar_bg_color;
-  color: @sidebar_fg_color;
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
 }
 
 /* nemo sidebar padding */
 NemoWindow .sidebar .cell {
-  padding: 2px 2px;
+    padding: 2px 2px;
 }
 
 /* sidebar padding for 3.18 */
 .sidebar-item {
-  padding: 10px 4px; }
-  .sidebar-item > Gtklabel {
+    padding: 10px 4px;
+}
+.sidebar-item > Gtklabel {
     padding-left: 6px;
-    padding-right: 6px; }
-  .sidebar-item.needs-attention > Gtklabel {
-    background-size: 6px 6px, 0 0; }
+    padding-right: 6px;
+}
+.sidebar-item.needs-attention > Gtklabel {
+    background-size: 6px 6px, 0 0;
+}
 
 GtkSidebarRow.list-row {
-  padding: 0px; }
+    padding: 0px;
+}
 GtkSidebarRow .sidebar-revealer {
-  padding: 1px 14px 1px 12px; }
+    padding: 1px 14px 1px 12px;
+}
 GtkSidebarRow .sidebar-icon:dir(ltr) {
-  padding-right: 8px; }
+    padding-right: 8px;
+}
 GtkSidebarRow .sidebar-icon:dir(rtl) {
-  padding-left: 8px; }
+    padding-left: 8px;
+}
 GtkSidebarRow .sidebar-label:dir(ltr) {
-  padding-right: 2px; }
+    padding-right: 2px;
+}
 GtkSidebarRow .sidebar-label:dir(rtl) {
-  padding-left: 2px; }
-
+    padding-left: 2px;
+}
 
 .sidebar-button.button.image-button {
-  padding: 3px;
-  border-radius: 0;
-  box-shadow: 0px 0px 0px alpha(@dark_shadow,0)}
+    padding: 3px;
+    border-radius: 0;
+    box-shadow: none;
+}
 .sidebar-button.button:not(:hover):not(:active) > GtkImage {
-  opacity: 0.5; }
-
+    opacity: 0.5;
+}
 .sidebar-item {
-  padding: 10px 4px; }
-  .sidebar-item > GtkLabel {
+    padding: 10px 4px;
+}
+.sidebar-item > GtkLabel {
     padding-left: 6px;
-    padding-right: 6px; }
-  .sidebar-item.needs-attention > GtkLabel {
-    background-size: 6px 6px, 0 0; }
-
+    padding-right: 6px;
+}
+.sidebar-item.needs-attention > GtkLabel {
+    background-size: 6px 6px, 0 0;
+}
 
 /**************
  * spinbutton *
@@ -1765,7 +1757,6 @@ GtkSidebarRow .sidebar-label:dir(rtl) {
     background-image: none;
     box-shadow: inset 1px 0 shade(@theme_base_color, 0.9);
 }
-
 
 .spinbutton .button:insensitive {
     color: mix(@theme_text_color, @theme_base_color, 0.7);
@@ -2931,6 +2922,7 @@ GtkTreeView.dnd {
 
 GtkTreeView .entry {
     border-radius: 0;
+    padding: 0 6px;
     background-color: @theme_base_color;
     background-image: none;
 }
