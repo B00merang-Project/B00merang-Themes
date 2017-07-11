@@ -767,3 +767,5 @@ widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 widget "xfwm4-tabwin*" style "xfwm-tabwin"
 widget_class "*XfsmLogoutDialog*" style "xfsm-logout"
 widget_class "*XfsmLogoutDialog*GtkButton" style "xfsm-logout-button"
+
+import "xfce.rc"
