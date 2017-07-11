@@ -768,4 +768,4 @@ widget "xfwm4-tabwin*" style "xfwm-tabwin"
 widget_class "*XfsmLogoutDialog*" style "xfsm-logout"
 widget_class "*XfsmLogoutDialog*GtkButton" style "xfsm-logout-button"
 
-import "xfce.rc"
+include "xfce.rc"
