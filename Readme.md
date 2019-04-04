@@ -12,14 +12,14 @@ Repository hosting all themes included in the [B00merang Theme Collection](http:
 
 ### Dark
 
-![dark](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-09-27-11-40-51.png)
+![dark](https://github.com/B00merang-Project/gallery/raw/master/B00merang%20Dark%20(1).png)
 
 ### Glass
 
-![glass](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/140909810.png)
+![glass](https://github.com/B00merang-Project/gallery/raw/master/B00merang%20Glass%20(1).png)
 
 ### Green
 
-![green](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/271897781.png)
+![green](https://github.com/B00merang-Project/gallery/raw/master/B00merang%20Green%20(1).png)
 
 > **Quick installation guide : http://b00merang.weebly.com/easy-installation-guide.html**
